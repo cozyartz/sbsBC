@@ -1,7 +1,8 @@
 {
-  "name": "",
+  "name": "superior-beauty-supply-bc",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "Landing page for Superior Beauty Supply and Barber Salon in Battle Creek, Michigan",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -9,6 +10,23 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.12.9"
-  }
+    "@astrojs/react": "^4.3.0",
+    "@astrojs/tailwind": "^6.0.2",
+    "@tailwindcss/typography": "^0.5.16",
+    "astro": "^5.12.9",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.539.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "tailwindcss": "^3.4.17"
+  },
+  "keywords": [
+    "beauty supply",
+    "barber salon",
+    "battle creek",
+    "michigan",
+    "hair care"
+  ],
+  "author": "Cozyartz Media Group",
+  "homepage": "https://www.superiorbeautysupply.com"
 }

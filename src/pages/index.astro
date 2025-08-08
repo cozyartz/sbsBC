@@ -1,16 +1,287 @@
 ---
-
+import Hero from '../components/Hero.jsx';
+import Services from '../components/Services.jsx';
+import Contact from '../components/Contact.jsx';
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Superior Beauty Supply and Barber Salon | Battle Creek, MI</title>
+		<meta name="description" content="Family-owned beauty supply and barber salon in Battle Creek, MI. Full-service hair care for all ages and hair types. 5-star rated with 133+ reviews. Open Sundays!" />
+		<meta name="keywords" content="beauty supply, barber salon, Battle Creek, hair care, braiding, extensions, men's grooming, hair color, locs" />
+		<meta property="og:title" content="Superior Beauty Supply and Barber Salon" />
+		<meta property="og:description" content="Premier beauty supply and barber salon serving Battle Creek, MI since 2022" />
+		<meta property="og:type" content="business.business" />
+		<meta property="og:url" content="https://www.superiorbeautysupply.com" />
+		<meta name="geo.region" content="US-MI" />
+		<meta name="geo.placename" content="Battle Creek" />
+		<meta name="geo.position" content="42.3000888,-85.167905" />
+		
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+		
+		<style>
+			html {
+				scroll-behavior: smooth;
+			}
+			
+			body {
+				font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+			}
+			
+			.gradient-text {
+				background: linear-gradient(135deg, #9f1239, #be123c, #e11d48);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+			}
+		</style>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	
+	<body class="antialiased overflow-x-hidden bg-gradient-to-br from-rose-50 via-white to-primary-50">
+		<!-- Hero Section -->
+		<Hero client:load />
+		
+		<!-- About Section -->
+		<section class="py-20 bg-gradient-to-b from-white to-primary-50/30">
+			<div class="container mx-auto px-4">
+				<div class="max-w-6xl mx-auto">
+					<div class="text-center mb-16">
+						<h2 class="font-heading text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary-800 to-rose-700 bg-clip-text text-transparent">
+							Family-Owned Excellence Since 2022
+						</h2>
+						<p class="text-xl text-primary-700 max-w-3xl mx-auto leading-relaxed">
+							Owned and operated by Ms. Sherria FM Heath and Mr. Maurice Heath, we're Battle Creek's premier destination for professional beauty care and authentic service.
+						</p>
+					</div>
+					
+					<div class="grid lg:grid-cols-3 gap-8 mb-16">
+						<div class="text-center p-8 bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-primary-100">
+							<div class="text-5xl font-bold text-rose-600 mb-2">133+</div>
+							<div class="text-primary-800 font-semibold mb-2">5-Star Reviews</div>
+							<div class="text-primary-600 text-sm">Consistently rated excellent by our community</div>
+						</div>
+						
+						<div class="text-center p-8 bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-primary-100">
+							<div class="text-5xl font-bold text-accent-600 mb-2">2+</div>
+							<div class="text-primary-800 font-semibold mb-2">Years Serving</div>
+							<div class="text-primary-600 text-sm">Building trust in the Battle Creek community</div>
+						</div>
+						
+						<div class="text-center p-8 bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-primary-100">
+							<div class="text-5xl font-bold text-primary-600 mb-2">100%</div>
+							<div class="text-primary-800 font-semibold mb-2">Satisfaction</div>
+							<div class="text-primary-600 text-sm">Committed to exceeding your expectations</div>
+						</div>
+					</div>
+					
+					<div class="bg-gradient-to-r from-primary-800 to-rose-700 rounded-3xl p-12 text-white text-center">
+						<h3 class="font-heading text-3xl font-bold mb-8">Why Choose Superior Beauty Supply?</h3>
+						<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+							<div class="flex items-center">
+								<span class="text-accent-400 mr-3 text-xl">✓</span>
+								<span>BBB Accredited Business</span>
+							</div>
+							<div class="flex items-center">
+								<span class="text-accent-400 mr-3 text-xl">✓</span>
+								<span>Open Sundays for Convenience</span>
+							</div>
+							<div class="flex items-center">
+								<span class="text-accent-400 mr-3 text-xl">✓</span>
+								<span>All Hair Types & Textures</span>
+							</div>
+							<div class="flex items-center">
+								<span class="text-accent-400 mr-3 text-xl">✓</span>
+								<span>Experienced & Caring Staff</span>
+							</div>
+							<div class="flex items-center">
+								<span class="text-accent-400 mr-3 text-xl">✓</span>
+								<span>Clean, Welcoming Environment</span>
+							</div>
+							<div class="flex items-center">
+								<span class="text-accent-400 mr-3 text-xl">✓</span>
+								<span>Family-Friendly Atmosphere</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- Services Section -->
+		<Services client:load />
+		
+		<!-- Products Section -->
+		<section class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-6xl mx-auto text-center">
+					<h2 class="font-heading text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary-800 to-rose-700 bg-clip-text text-transparent">
+						Premium Beauty Products
+					</h2>
+					<p class="text-xl text-primary-700 mb-16 max-w-2xl mx-auto">
+						Carefully curated selection of professional-grade products from trusted brands
+					</p>
+					
+					<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+						<div class="group p-8 bg-gradient-to-br from-primary-50 to-rose-50 rounded-3xl border border-primary-100 hover:shadow-lg transition-all duration-300">
+							<div class="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">🧴</div>
+							<h3 class="font-bold text-lg mb-3 text-primary-800">Hair Care</h3>
+							<p class="text-primary-600 text-sm leading-relaxed">Shampoos, conditioners, and treatments for every hair type and texture</p>
+						</div>
+						
+						<div class="group p-8 bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl border border-rose-100 hover:shadow-lg transition-all duration-300">
+							<div class="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">💄</div>
+							<h3 class="font-bold text-lg mb-3 text-primary-800">Makeup & Beauty</h3>
+							<p class="text-primary-600 text-sm leading-relaxed">Professional cosmetics and skincare products for every occasion</p>
+						</div>
+						
+						<div class="group p-8 bg-gradient-to-br from-accent-50 to-yellow-50 rounded-3xl border border-accent-100 hover:shadow-lg transition-all duration-300">
+							<div class="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">💇‍♀️</div>
+							<h3 class="font-bold text-lg mb-3 text-primary-800">Wigs & Extensions</h3>
+							<p class="text-primary-600 text-sm leading-relaxed">Premium wigs, I-part, V-part, and heart hairline styles</p>
+						</div>
+						
+						<div class="group p-8 bg-gradient-to-br from-primary-50 to-primary-100 rounded-3xl border border-primary-200 hover:shadow-lg transition-all duration-300">
+							<div class="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">🪒</div>
+							<h3 class="font-bold text-lg mb-3 text-primary-800">Men's Grooming</h3>
+							<p class="text-primary-600 text-sm leading-relaxed">Beard oils, styling products, and professional grooming tools</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- Contact Section -->
+		<Contact client:load />
+		
+		<!-- Footer -->
+		<footer class="bg-gradient-to-br from-primary-900 to-rose-900 text-white py-16">
+			<div class="container mx-auto px-4">
+				<div class="max-w-6xl mx-auto">
+					<div class="grid md:grid-cols-3 gap-12 mb-8">
+						<div>
+							<h3 class="font-heading text-2xl font-bold mb-4">
+								Superior Beauty Supply<br />
+								<span class="text-accent-400">& Barber Salon</span>
+							</h3>
+							<p class="text-white/80 mb-6 leading-relaxed">
+								Your premier destination for professional beauty care and authentic service in Battle Creek, Michigan.
+							</p>
+							<div class="flex items-center space-x-4">
+								<a href="https://www.facebook.com/p/Superior-Beauty-Supply-Barber-Salon-100090738437557/" 
+								   target="_blank" 
+								   rel="noopener noreferrer"
+								   class="text-accent-400 hover:text-accent-300 transition-colors font-medium">
+									Facebook
+								</a>
+								<span class="text-white/40">|</span>
+								<span class="text-accent-400 font-medium">BBB Accredited</span>
+							</div>
+						</div>
+						
+						<div>
+							<h4 class="font-semibold text-lg mb-6">Quick Links</h4>
+							<ul class="space-y-3 text-white/80">
+								<li><a href="#services" class="hover:text-accent-400 transition-colors">Services</a></li>
+								<li><a href="#products" class="hover:text-accent-400 transition-colors">Products</a></li>
+								<li><a href="#contact" class="hover:text-accent-400 transition-colors">Location & Hours</a></li>
+								<li><a href="tel:269-719-2310" class="hover:text-accent-400 transition-colors">Book Appointment</a></li>
+							</ul>
+						</div>
+						
+						<div>
+							<h4 class="font-semibold text-lg mb-6">Contact Information</h4>
+							<div class="space-y-4 text-white/80">
+								<div class="flex items-start">
+									<span class="text-accent-400 mr-3">📍</span>
+									<div>
+										<div class="font-medium">1020 E Columbia Ave</div>
+										<div>Battle Creek, MI 49014</div>
+									</div>
+								</div>
+								
+								<div class="flex items-center">
+									<span class="text-accent-400 mr-3">📞</span>
+									<a href="tel:269-719-2310" class="hover:text-accent-400 font-medium transition-colors">
+										(269) 719-2310
+									</a>
+								</div>
+								
+								<div class="flex items-center">
+									<span class="text-accent-400 mr-3">⭐</span>
+									<span class="font-medium">5.0 Stars • 133+ Reviews</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="border-t border-white/20 pt-8 text-center text-white/60">
+						<p class="mb-2">&copy; 2024 Superior Beauty Supply and Barber Salon. All rights reserved.</p>
+						<p class="text-sm">
+							Website crafted with ❤️ by 
+							<a href="https://cozyartz.com" target="_blank" rel="noopener noreferrer" class="text-accent-400 hover:text-accent-300 transition-colors">
+								Cozyartz Media Group
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Structured Data for Google -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "HairSalon",
+			"name": "Superior Beauty Supply and Barber Salon",
+			"alternateName": "Superior Beauty Supply & Barber Salon",
+			"description": "Family-owned beauty supply and barber salon in Battle Creek, MI offering professional hair care services for all ages and hair types.",
+			"url": "https://www.superiorbeautysupply.com",
+			"telephone": "(269) 719-2310",
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "1020 E Columbia Ave",
+				"addressLocality": "Battle Creek",
+				"addressRegion": "MI",
+				"postalCode": "49014",
+				"addressCountry": "US"
+			},
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": 42.3000888,
+				"longitude": -85.167905
+			},
+			"openingHours": [
+				"Mo 11:00-19:00",
+				"Tu-Fr 09:00-19:00",
+				"Su 11:00-17:00"
+			],
+			"aggregateRating": {
+				"@type": "AggregateRating",
+				"ratingValue": "5.0",
+				"reviewCount": "133"
+			},
+			"founder": [
+				{
+					"@type": "Person",
+					"name": "Sherria FM Heath"
+				},
+				{
+					"@type": "Person",
+					"name": "Maurice Heath"
+				}
+			],
+			"foundingDate": "2022-10-01",
+			"priceRange": "$$",
+			"paymentAccepted": "Cash, Credit Card",
+			"currenciesAccepted": "USD"
+		}
+		</script>
 	</body>
 </html>
