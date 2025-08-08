@@ -1,0 +1,7 @@
+name = "sbs-bc"
+compatibility_date = "2025-08-08"
+
+[env.production]
+routes = [
+  { pattern = "exp3.wantthissite.com", custom_domain = true }
+]
